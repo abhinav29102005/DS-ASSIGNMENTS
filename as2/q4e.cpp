@@ -7,7 +7,7 @@ void sToLow(char s[]) {
     }
 }
 
-int main9e() {
+int main() {
     using namespace std;
     char str[] = "HeLlO WoRlD";
     sToLow(str);

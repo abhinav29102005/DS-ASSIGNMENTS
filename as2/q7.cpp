@@ -12,7 +12,7 @@ int countInv(int arr[], int n) {
     return count;
 }
 
-int main12() {
+int main() {
 
     int arr[] = {2, 4, 1, 3, 5};
     int n = 5;

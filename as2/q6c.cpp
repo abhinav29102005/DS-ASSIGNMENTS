@@ -48,7 +48,7 @@ void sMul(Triplet A[], Triplet B[], Triplet C[]) {
     C[0].val = k_c - 1;
 }
 
-int mainMul() {
+int main() {
     using namespace std;
     Triplet A_mul[] = {{2, 3, 2}, {0, 0, 1}, {1, 1, 2}};
     Triplet B_mul[] = {{3, 2, 2}, {0, 0, 3}, {1, 1, 4}};

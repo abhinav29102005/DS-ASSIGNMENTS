@@ -15,7 +15,7 @@ void ssort(char arr[][100], int n) {
     }
 }
 
-int main9d() {
+int main() {
     using namespace std;
     char strArr[][100] = {"banana", "apple", "zebra", "cat"};
     int n = 4;

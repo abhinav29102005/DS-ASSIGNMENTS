@@ -17,7 +17,7 @@ void sdelVowels(char s[]) {
     s[j] = '\0';
 }
 
-int main9c() {
+int main() {
     using namespace std;
     char str[] = "Programming";
     sdelVowels(str);

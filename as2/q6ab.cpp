@@ -42,7 +42,7 @@ void sAdd(Triplet A[], Triplet B[], Triplet C[]) {
     C[0].val = k - 1;
 }
 
-int mainAdd() {
+int main() {
     using namespace std;
     Triplet A[] = {{3, 3, 2}, {0, 1, 10}, {1, 0, 20}};
     Triplet B[] = {{3, 3, 2}, {0, 1, 5}, {2, 2, 30}};

@@ -11,7 +11,7 @@ void bsort(int arr[], int n) {
     }
 }
 
-int main7() {
+int main() {
     using namespace std;
     int arr[] = {64, 34, 25, 12, 22, 11, 90};
     int n = 7;

@@ -8,7 +8,7 @@ void sreverse(char s[]) {
     }
 }
 
-int main9b() {
+int main() {
     using namespace std;
     char str[] = "DataStructure";
     sreverse(str);

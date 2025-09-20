@@ -17,7 +17,7 @@ int countDist(int arr[], int n) {
     return count;
 }
 
-int main13() {
+int main() {
     int arr[] = {10, 20, 10, 30, 20, 40};
     int n = 6;
     cout << "Number of Distinct Elements: " << countDist(arr, n) << endl;

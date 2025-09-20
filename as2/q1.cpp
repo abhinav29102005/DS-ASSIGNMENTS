@@ -16,7 +16,7 @@ int bsearch(int arr[], int n, int target) {
     return -1;
 }
 
-int main1() {
+int main() {
 
     int arr[] = {11, 12, 22, 25, 34, 64, 90}; // Array must be sorted
     int n = 7;
