@@ -261,8 +261,8 @@ int findMid(Node* head) {
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/abhinav29102005/data-structures-lab.git
-cd data-structures-lab
+git clone https://github.com/abhinav29102005/DS-ASSIGNMENTS.git
+cd DS-ASSIGNMENTS
 ```
 
 ### 2️⃣ Compile Programs
