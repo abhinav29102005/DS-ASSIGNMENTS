@@ -5,8 +5,8 @@
 ![Data Structures](https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=40&duration=3000&pause=1000&color=F97316&center=true&vCenter=true&multiline=true&repeat=false&width=600&height=100&lines=Data+Structures+Lab;UCS301+Programming+Assignments)
 
 [![Made with C++](https://img.shields.io/badge/Made%20with-C%2B%2B-blue?style=for-the-badge&logo=cplusplus)](https://isocpp.org/)
-[![Lab Assignments](https://img.shields.io/badge/Lab%20Assignments-5-orange?style=for-the-badge)](https://github.com/abhinav29102005/data-structures-lab)
-[![Problems Solved](https://img.shields.io/badge/Problems%20Solved-35%2B-success?style=for-the-badge)](https://github.com/abhinav29102005/data-structures-lab)
+[![Lab Assignments](https://img.shields.io/badge/Lab%20Assignments-5-orange?style=for-the-badge)](https://github.com/abhinav29102005/DS-ASSIGNMENTS)
+[![Problems Solved](https://img.shields.io/badge/Problems%20Solved-35%2B-success?style=for-the-badge)](https://github.com/abhinav29102005/DS-ASSIGNMENTS)
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
