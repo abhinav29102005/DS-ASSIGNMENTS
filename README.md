@@ -5,8 +5,8 @@
 ![Data Structures](https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=40&duration=3000&pause=1000&color=F97316&center=true&vCenter=true&multiline=true&repeat=false&width=600&height=100&lines=Data+Structures+Lab;UCS301+Programming+Assignments)
 
 [![Made with C++](https://img.shields.io/badge/Made%20with-C%2B%2B-blue?style=for-the-badge&logo=cplusplus)](https://isocpp.org/)
-[![Lab Assignments](https://img.shields.io/badge/Lab%20Assignments-5-orange?style=for-the-badge)](https://github.com)
-[![Problems Solved](https://img.shields.io/badge/Problems%20Solved-35%2B-success?style=for-the-badge)](https://github.com)
+[![Lab Assignments](https://img.shields.io/badge/Lab%20Assignments-5-orange?style=for-the-badge)](https://github.com/abhinav29102005/data-structures-lab)
+[![Problems Solved](https://img.shields.io/badge/Problems%20Solved-35%2B-success?style=for-the-badge)](https://github.com/abhinav29102005/data-structures-lab)
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
@@ -16,6 +16,8 @@
 ## 🎯 Overview
 
 A comprehensive collection of **Data Structures** programming assignments implemented in C++. This repository contains well-documented solutions to all lab assignments for the **UCS301** course, featuring clean code, detailed explanations, and complexity analysis.
+
+**Created by: Abhinav Kumar Singh**
 
 <div align="center">
 
@@ -31,8 +33,8 @@ A comprehensive collection of **Data Structures** programming assignments implem
 ## 📊 Repository Statistics
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical&count_private=true&include_all_commits=true" height="165">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=radical" height="165">
+<img src="https://github-readme-stats.vercel.app/api?username=abhinav29102005&show_icons=true&theme=radical&count_private=true&include_all_commits=true" height="165">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=abhinav29102005&theme=radical" height="165">
 </div>
 
 ## 🗂️ Project Structure
@@ -259,7 +261,7 @@ int findMid(Node* head) {
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/yourusername/data-structures-lab.git
+git clone https://github.com/abhinav29102005/data-structures-lab.git
 cd data-structures-lab
 ```
 
@@ -442,15 +444,15 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ## 👨‍💻 Author
 
 <div align="center">
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=36BCF7&center=true&vCenter=true&width=435&lines=Crafted+with+💝+by+[Your+Name];Data+Structures+Enthusiast" alt="Author" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=36BCF7&center=true&vCenter=true&width=435&lines=Made+with+💝+by+Abhinav+Kumar+Singh;Data+Structures+Enthusiast" alt="Author" />
 
 <br>
 
-**[Your Name]**
+**Abhinav Kumar Singh**
 
-[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abhinav29102005)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/bigboyaks)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:asingh3_be24@thapar.edu)
 
 </div>
 
@@ -459,10 +461,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 <div align="center">
 
 **Special Thanks To:**
-- 👩‍🏫 **Course Instructor**: [Instructor Name]
-- 🏫 **Institution**: [University Name]  
+- 👩‍🏫 **Course Instructor**: Dr. Rajendra Kumar Roul
+- 🏫 **Institution**: TIET, Patiala  
 - 📚 **Course**: UCS301 - Data Structures
-- 🌟 **Community**: Fellow students and contributors
+- 🌟 **Community**: Fellow students and teachers
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
@@ -474,12 +476,12 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=20&duration=3000&pause=1000&color=FFD700&center=true&vCenter=true&repeat=false&width=400&lines=Happy+Coding!+🚀✨" alt="Happy Coding" />
 
-![Visitor Count](https://profile-counter.glitch.me/{yourusername}/count.svg)
+
 
 </div>
 
 ---
 
 <div align="center">
-<sub>Built with ❤️ using C++ • © 2024 [Your Name]</sub>
+<sub>Built with ❤️ using C++ • © 2025 Abhinav Kumar Singh</sub>
 </div>
