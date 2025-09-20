@@ -8,7 +8,7 @@ void matTrans(int A[3][3], int T[3][3], int r, int c) {
     }
 }
 
-int main4c() {
+int main() {
     int A[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     int T[3][3];
 

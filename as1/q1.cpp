@@ -88,7 +88,7 @@ void lsearch(int arr[], int n) {
     cout << "Element not found.\n";
 }
 
-int main1() {
+int main() {
     using namespace std;
     int arr[100];
     int n = 0;

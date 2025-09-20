@@ -19,7 +19,7 @@ void rowColSum(int A[3][3], int r, int c) {
     }
 }
 
-int main5() {
+int main() {
     
     int A[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     rowColSum(A, 3, 3);

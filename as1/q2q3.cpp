@@ -25,7 +25,7 @@ void remDup(int arr[], int& n) {
     n = j;
 }
 
-int main2() {
+int main() {
     using namespace std;
     int arr[] = {4, 7, 4, 1, 9, 7, 2, 9};
     int n = 8;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm> // For swap
+#include <algorithm> 
     using namespace std;
 void reverseArr(int arr[], int n) {
     int start = 0;
@@ -11,7 +11,7 @@ void reverseArr(int arr[], int n) {
     }
 }
 
-int main4a() {
+int main() {
 
     int arr[] = {1, 2, 3, 4, 5};
     int n = 5;
