@@ -1,0 +1,126 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node {
+    int data;
+    struct node *next;
+};
+
+struct node *head = NULL;
+
+void insert_first(int x) {
+    struct node *t = malloc(sizeof(struct node));
+    t->data = x;
+    if(head == NULL) {
+        head = t;
+        t->next = head;
+        return;
+    }
+    struct node *p = head;
+    while(p->next != head) p = p->next;
+    t->next = head;
+    p->next = t;
+    head = t;
+}
+
+void insert_last(int x) {
+    struct node *t = malloc(sizeof(struct node));
+    t->data = x;
+    if(head == NULL) {
+        head = t;
+        t->next = head;
+        return;
+    }
+    struct node *p = head;
+    while(p->next != head) p = p->next;
+    p->next = t;
+    t->next = head;
+}
+
+void insert_after(int key, int x) {
+    struct node *p = head;
+    if(!p) return;
+    do {
+        if(p->data == key) {
+            struct node *t = malloc(sizeof(struct node));
+            t->data = x;
+            t->next = p->next;
+            p->next = t;
+            return;
+        }
+        p = p->next;
+    } while(p != head);
+}
+
+void delete_node(int key) {
+    if(!head) return;
+    struct node *p = head, *prev = NULL;
+    do {
+        if(p->data == key) {
+            if(prev == NULL) {
+                struct node *temp = head;
+                while(temp->next != head) temp = temp->next;
+                if(head->next == head) {
+                    free(head);
+                    head = NULL;
+                    return;
+                }
+                temp->next = head->next;
+                head = head->next;
+                free(p);
+                return;
+            }
+            prev->next = p->next;
+            free(p);
+            return;
+        }
+        prev = p;
+        p = p->next;
+    } while(p != head);
+}
+
+int search(int key) {
+    if(!head) return -1;
+    struct node *p = head;
+    int pos = 1;
+    do {
+        if(p->data == key) return pos;
+        p = p->next;
+        pos++;
+    } while(p != head);
+    return -1;
+}
+
+void display() {
+    if(!head) return;
+    struct node *p = head;
+    do {
+        printf("%d ", p->data);
+        p = p->next;
+    } while(p != head);
+}
+
+int main() {
+    int ch, x, key;
+    while(1) {
+        scanf("%d", &ch);
+        if(ch == 1) {
+            scanf("%d", &x);
+            insert_first(x);
+        } else if(ch == 2) {
+            scanf("%d", &x);
+            insert_last(x);
+        } else if(ch == 3) {
+            scanf("%d %d", &key, &x);
+            insert_after(key, x);
+        } else if(ch == 4) {
+            scanf("%d", &key);
+            delete_node(key);
+        } else if(ch == 5) {
+            scanf("%d", &key);
+            printf("%d\n", search(key));
+        } else if(ch == 6) {
+            display();
+        } else break;
+    }
+}
