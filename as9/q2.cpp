@@ -1,110 +1,62 @@
 #include <iostream>
-#include <vector>
+#include <queue>
 using namespace std;
 
-// ---------------------------------------------------
-// Priority Queue implemented using Max Heap
-// ---------------------------------------------------
-class PriorityQueue
+class Graph
 {
-    vector<int> heap;
-
-    void heapifyUp(int i)
-    {
-        while (i > 0)
-        {
-            int parent = (i - 1) / 2;
-            if (heap[parent] < heap[i])
-            {
-                swap(heap[parent], heap[i]);
-                i = parent;
-            }
-            else
-                break;
-        }
-    }
-
-    void heapifyDown(int i)
-    {
-        int n = heap.size();
-        while (true)
-        {
-            int left = 2 * i + 1;
-            int right = 2 * i + 2;
-            int largest = i;
-
-            if (left < n && heap[left] > heap[largest])
-                largest = left;
-            if (right < n && heap[right] > heap[largest])
-                largest = right;
-
-            if (largest != i)
-            {
-                swap(heap[i], heap[largest]);
-                i = largest;
-            }
-            else
-                break;
-        }
-    }
+    int V;
+    int adj[20][20];
 
 public:
-    void push(int val)
+    Graph(int V)
     {
-        heap.push_back(val);
-        heapifyUp(heap.size() - 1);
+        this->V = V;
+        for (int i = 0; i < V; i++)
+            for (int j = 0; j < V; j++)
+                adj[i][j] = 0;
     }
 
-    void pop()
+    void addEdge(int u, int v, bool directed = false)
     {
-        if (heap.empty())
-            return;
-        heap[0] = heap.back();
-        heap.pop_back();
-        heapifyDown(0);
+        adj[u][v] = 1;
+        if (!directed)
+            adj[v][u] = 1;
     }
 
-    int top()
+    void BFS(int start)
     {
-        if (heap.empty())
-            return -1;
-        return heap[0];
-    }
+        bool visited[20] = {false};
+        queue<int> q;
+        visited[start] = true;
+        q.push(start);
 
-    bool empty()
-    {
-        return heap.empty();
-    }
+        while (!q.empty())
+        {
+            int node = q.front();
+            q.pop();
+            cout << node << " ";
 
-    void display()
-    {
-        for (int val : heap)
-            cout << val << " ";
-        cout << endl;
+            for (int i = 0; i < V; i++)
+            {
+                if (adj[node][i] && !visited[i])
+                {
+                    visited[i] = true;
+                    q.push(i);
+                }
+            }
+        }
     }
 };
 
-// ---------------------------------------------------
-// Main function
-// ---------------------------------------------------
 int main()
 {
-    PriorityQueue pq;
+    Graph g(6);
+    g.addEdge(0, 1);
+    g.addEdge(0, 2);
+    g.addEdge(1, 3);
+    g.addEdge(2, 4);
+    g.addEdge(3, 5);
 
-    pq.push(10);
-    pq.push(30);
-    pq.push(20);
-    pq.push(5);
-    pq.push(40);
-
-    cout << "Priority Queue (Max-Heap): ";
-    pq.display();
-
-    cout << "Top element: " << pq.top() << endl;
-
-    pq.pop();
-    cout << "After removing top, Queue: ";
-    pq.display();
-
-    return 0;
+    cout << "BFS traversal starting from vertex 0: ";
+    g.BFS(0);
 }

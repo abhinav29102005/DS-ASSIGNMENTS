@@ -47,7 +47,7 @@ void cntDel(Node** head, int key) {
     cout << "Count: " << count << endl;
 }
 
-int mainQ2() {
+int main() {
     Node* head = new Node{1, new Node{2, new Node{1, new Node{2, new Node{1, new Node{3, new Node{1, nullptr}}}}}}};
     int key = 1;
     

@@ -1,9 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-
 using namespace std;
-
 struct Node {
     int data;
     Node* next;
@@ -52,7 +50,7 @@ void insBet(Node** head, int newVal, int refVal, bool after) {
         newNode->next = curr->next;
         curr->next = newNode;
     } else {
-        if (prev == nullptr) { // Insert before head
+        if (prev == nullptr) { 
             newNode->next = *head;
             *head = newNode;
         } else {

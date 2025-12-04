@@ -1,94 +1,89 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-// ---------------------------------------------------
-// Heapify function — maintains the max/min heap property
-// ---------------------------------------------------
-void heapify(int arr[], int n, int i, bool isMaxHeap)
+class Graph
 {
-    int extreme = i; // Index of largest (for max) or smallest (for min)
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
+    int V;
+    vector<vector<int>> adj;
 
-    // For increasing order — use Max Heap
-    // For decreasing order — use Min Heap
-    if (isMaxHeap)
+public:
+    Graph(int V)
     {
-        if (left < n && arr[left] > arr[extreme])
-            extreme = left;
-        if (right < n && arr[right] > arr[extreme])
-            extreme = right;
-    }
-    else
-    {
-        if (left < n && arr[left] < arr[extreme])
-            extreme = left;
-        if (right < n && arr[right] < arr[extreme])
-            extreme = right;
+        this->V = V;
+        adj.resize(V, vector<int>(V, 0));
     }
 
-    // If root is not extreme, swap and continue heapifying
-    if (extreme != i)
+    void addEdge(int u, int v, bool directed = false)
     {
-        swap(arr[i], arr[extreme]);
-        heapify(arr, n, extreme, isMaxHeap);
-    }
-}
-
-// ---------------------------------------------------
-// Build heap and perform HeapSort
-// ---------------------------------------------------
-void heapSort(int arr[], int n, bool increasing = true)
-{
-    bool isMaxHeap = increasing; // max-heap for ascending order
-
-    // Step 1: Build heap
-    for (int i = n / 2 - 1; i >= 0; i--)
-        heapify(arr, n, i, isMaxHeap);
-
-    // Step 2: Extract elements one by one
-    for (int i = n - 1; i > 0; i--)
-    {
-        swap(arr[0], arr[i]); // Move root to end
-        heapify(arr, i, 0, isMaxHeap);
+        adj[u][v] = 1;
+        if (!directed)
+            adj[v][u] = 1;
     }
 
-    // If decreasing order, reverse array
-    if (!increasing)
+    void displayMatrix()
     {
-        for (int i = 0; i < n / 2; i++)
-            swap(arr[i], arr[n - i - 1]);
+        for (int i = 0; i < V; i++)
+        {
+            for (int j = 0; j < V; j++)
+                cout << adj[i][j] << " ";
+            cout << endl;
+        }
     }
-}
 
-// ---------------------------------------------------
-// Utility: Print array
-// ---------------------------------------------------
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-}
+    void adjacentVertices(int v)
+    {
+        cout << "Adjacent vertices of " << v << ": ";
+        for (int i = 0; i < V; i++)
+            if (adj[v][i])
+                cout << i << " ";
+        cout << endl;
+    }
 
-// ---------------------------------------------------
-// Main function
-// ---------------------------------------------------
+    int inDegree(int v)
+    {
+        int deg = 0;
+        for (int i = 0; i < V; i++)
+            if (adj[i][v])
+                deg++;
+        return deg;
+    }
+
+    int outDegree(int v)
+    {
+        int deg = 0;
+        for (int i = 0; i < V; i++)
+            if (adj[v][i])
+                deg++;
+        return deg;
+    }
+
+    int edgeCount(bool directed = false)
+    {
+        int count = 0;
+        for (int i = 0; i < V; i++)
+            for (int j = 0; j < V; j++)
+                if (adj[i][j])
+                    count++;
+        return directed ? count : count / 2;
+    }
+};
+
 int main()
 {
-    int arr[] = {12, 11, 13, 5, 6, 7};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int V = 5;
+    Graph g(V);
+    g.addEdge(0, 1);
+    g.addEdge(0, 4);
+    g.addEdge(1, 2);
+    g.addEdge(1, 3);
+    g.addEdge(1, 4);
+    g.addEdge(2, 3);
+    g.addEdge(3, 4);
 
-    cout << "Original array: ";
-    printArray(arr, n);
-
-    heapSort(arr, n, true);
-    cout << "Sorted in Increasing Order: ";
-    printArray(arr, n);
-
-    heapSort(arr, n, false);
-    cout << "Sorted in Decreasing Order: ";
-    printArray(arr, n);
-
-    return 0;
+    g.displayMatrix();
+    cout << "In-degree of 3: " << g.inDegree(3) << endl;
+    cout << "Out-degree of 1: " << g.outDegree(1) << endl;
+    g.adjacentVertices(1);
+    cout << "Total edges: " << g.edgeCount() << endl;
 }
