@@ -60,27 +60,30 @@ struct Node{
 // }
 
 //levelorder traversal
-Node* buildTree(vector<int> inorder){
-  idx ++;
-  if( inorder[idx] == -1) {return nullptr;}
-  Node* root = new Node(inorder[idx]);
-  root->left = buildTree(inorder);
-  root->right=buildTree(inorder);
-  return root;
+Node* buildTree(const vector<int>& arr) {
+    idx++;
+    if (arr[idx] == -1) return nullptr;
+    Node* root = new Node(arr[idx]);
+    root->left = buildTree(arr);
+    root->right = buildTree(arr);
+    return root;
 }
-void inOrder(Node* root){
-  queue<Node*> q;
-  q.push(root);
-  while(!q.empty()){
-  if(!root) return;
-  inOrder(root->left);
-  cout<<root->data<<" ";
-  inOrder(root->right);
+void levelOrder(Node* root) {
+    if (!root) return;
+    queue<Node*> q;
+    q.push(root);
+    while (q.size()>0) {
+        Node* curr = q.front();
+        q.pop();
+        cout << curr->data << " ";
+        if (curr->left) q.push(curr->left);
+        if (curr->right) q.push(curr->right);
+    }
 }
-int main(){
-  vector<int> postorder = {1,2,-1,-1,3,4,-1,-1,5,-1,-1};
-  Node* root = buildTree(postorder);
-  postOrder(root);
-  cout<<endl;
-  return 0;
+int main() {
+    vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
+    Node* root = buildTree(preorder);
+    levelOrder(root);
+    cout << endl;
+    return 0;
 }
