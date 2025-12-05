@@ -6,12 +6,7 @@ struct Node
     int data;
     Node *left, *right;
 };
-
-Node *newNode(int val)
-{
-    return new Node{val, nullptr, nullptr};
-}
-
+Node *newNode(int val){return new Node{val, nullptr, nullptr};}
 Node *insert(Node *root, int val)
 {
     if (!root)
@@ -72,13 +67,10 @@ int main()
     insert(root, 15);
     insert(root, 3);
     insert(root, 7);
-
     cout << "Max Depth: " << maxDepth(root) << endl;
     cout << "Min Depth: " << minDepth(root) << endl;
-
     root = deleteNode(root, 5);
     cout << "After deleting 5, Max Depth: " << maxDepth(root) << endl;
     cout << "After deleting 5, Min Depth: " << minDepth(root) << endl;
-
     return 0;
 }
