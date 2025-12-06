@@ -1,5 +1,4 @@
-#include <iostream>
-#include <cstring>
+#include<bits/stdc++.h>
 using namespace std;
 struct Node {
     char key[50];    
@@ -40,7 +39,7 @@ void insert(Node* &root, const char s[]) {
         }
     }
 }
-Node* findSibling(Node* root, const char key[]) {
+Node* findsibling(Node* root, const char key[]) {
     Node* parent = NULL;
     Node* cur = root;
     while (cur != NULL) {
@@ -62,7 +61,6 @@ Node* findSibling(Node* root, const char key[]) {
     else
         return parent->left;
 }
-
 int main() {
     Node* root = NULL;
     int n;
@@ -77,7 +75,7 @@ int main() {
     char query[50];
     cout << "Enter key to find its sibling: ";
     cin >> query;
-    Node* sib = findSibling(root, query);
+    Node* sib = findsibling(root, query);
     if (sib == NULL) {
         cout << "No sibling found.\n";
     } else {
