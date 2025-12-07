@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-/* --- Next Greater --- */
 vector<int> next_greater_bruteforce(const vector<int>& arr) {
     int n = (int)arr.size();
     vector<int> res(n, -1);
@@ -15,8 +13,6 @@ vector<int> next_greater_bruteforce(const vector<int>& arr) {
     }
     return res;
 }
-
-/* --- List and Cycle Detection --- */
 struct ListNode {
     int val;
     ListNode* next;
@@ -33,7 +29,6 @@ ListNode* detect_cycle_bruteforce(ListNode* head) {
     return nullptr;
 }
 
-/* --- BST and delete leaves --- */
 struct TreeNode {
     int key;
     TreeNode* left;
@@ -62,17 +57,12 @@ void inorder_print(TreeNode* root) {
     cout << root->key << ' ';
     inorder_print(root->right);
 }
-
-/* --- Main tests --- */
 int main() {
-    // Next Greater test
     vector<int> arr = {2,1,2,4,3};
     auto res = next_greater_bruteforce(arr);
     cout << "Next greater (bruteforce): ";
     for (int x : res) cout << x << ' ';
-    cout << '\n'; // 4 2 4 -1 -1
-
-    // Cycle detection test
+    cout << '\n';
     ListNode* A = new ListNode(1);
     ListNode* B = new ListNode(2);
     ListNode* C = new ListNode(3);
@@ -82,7 +72,6 @@ int main() {
     if (cycleNode) cout << "Cycle detected at node with value: " << cycleNode->val << '\n';
     else cout << "No cycle detected\n";
 
-    // Delete leaves test
     TreeNode* root = nullptr;
     root = bst_insert(root, 15);
     root = bst_insert(root, 10);
@@ -94,7 +83,5 @@ int main() {
     root = delete_leaves(root);
     cout << "Inorder after deleting leaves: ";
     inorder_print(root); cout << '\n';
-
-    // Note: we are not freeing all allocated memory in this demo (linked list cycle etc.)
     return 0;
 }
